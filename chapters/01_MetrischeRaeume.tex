@@ -1,0 +1,43 @@
+\section{Metrische Räume}
+
+\paragraph{Definitionen}
+\begin{itemize}
+  \item \textbf{Norm}: Abbildung \( \left\Vert \cdot \right\Vert: V \to \R_{\geq 0} \) sodass \( \forall v,w \in V \), \( \lambda \in \R \):
+  \begin{itemize}
+    \item \emph{Definitheit}: \( \left\Vert v \right\Vert = 0 \Leftrightarrow v = 0 \)
+    \item \emph{Absolute Homogenität}: \( \left\Vert \lambda v \right\Vert = \left\vert \lambda \right\vert * \left\Vert v \right\Vert \)
+    \item \emph{Dreiecksungleichung}: \( \left\Vert v + w \right\Vert \leq \left\Vert v \right\Vert + \left\Vert w \right\Vert \)
+  \end{itemize}
+  (\( \R \)-Vektorraum \( V \))
+  \item \textbf{Einheitssphäre}: \( S_1^n \coloneqq \left \{ x \in \R^{n+1} : \left\Vert x \right\Vert = 1 \right \} \) \( n \)-te Einheitssphäre
+  \item \textbf{Metrik}: \( d: X \times X \to \R_{\geq 0} \) (Menge \( X \)) sodass \( \forall x,y,z \in X: \)
+  \begin{itemize}
+    \item \emph{Positivität}: \( d(x,y) = 0 \Leftrightarrow x = y \)
+    \item \emph{Symmetrie}: \( d(x,y) = d(y,x) \)
+    \item \emph{Dreiecksungleichung}: \( d(x,z) \leq d(x,y) + d(y,z) \)
+  \end{itemize}
+  \item \textbf{Wichtige Metriken}:
+  \begin{itemize}
+    \item \emph{Triviale Metrik}: \( d(x,y) \coloneqq \begin{cases}
+      0\text{,} &x=y \\ 1\text{,} &x \neq y
+    \end{cases} \)
+    \item \emph{Euklidische Metrik}: \( X = \R^n \), \( d_e(x, y) \coloneqq \sqrt{\sum_{i=1}^n(x_i-y_i)^2} = \Vert x-y \Vert \)
+    \item \emph{Induzierte Metrik}: \( d(v,w) \coloneqq \left\Vert v - w \right\Vert \) (Norm \( \left\Vert \cdot \right\Vert \))
+    \item \emph{Winkelmetrik}: \( d_W(x,y) \coloneqq \arccos(\left\langle x,y \right\rangle) \)
+  \end{itemize}
+  \item \textbf{Pseudometrik}: Metrik, aber \( d(x,y) = 0 \Rightarrow x = y \) gilt nicht
+  \item \textbf{Metrischer Raum}: \( (X,d) \) (Menge \( X \), Metrik \( d \) auf \( X \))
+  \item \textbf{Abgeschlossener Ball}: abgeschlossener \( r \)-Ball um \( x \)
+  \begin{equation*}
+    \overline{B_r(x)} \coloneqq \{ y \in X : d(x,y) \leq r \}
+  \end{equation*}
+  \item \textbf{Abstandserhaltende Abbildung}: \( f: X \to Y \) sodass
+  \begin{equation*}
+    \forall x, y \in X: d_Y(f(x), f(y)) = d_X(x, y)\text{.}
+  \end{equation*} 
+  (metrische Räume \( (X, d_X) \), \( (Y, d_Y) \))
+  \item \textbf{Isometrie}: bijektive abstandserhaltende Abbildung
+  \begin{itemize}
+    \item[\( \to \)] \( X \), \( Y \) isometrisch \( \Leftrightarrow \ \exists \) Isometrie \( f: (X, d_X) \to (Y, d_Y) \)
+  \end{itemize}
+\end{itemize}
