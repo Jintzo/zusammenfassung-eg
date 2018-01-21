@@ -1,0 +1,41 @@
+\section{Grundbegriffe allg. Topologie}
+
+\paragraph{Topologische Räume}
+\begin{itemize}
+  \item \textbf{Topologie}: \( \O \subseteq \mathcal{P}(X) \) (Menge \( X \)) sodass
+  \begin{itemize}
+    \item \( X, \varnothing \in \O \)
+    \item Durchschnitte \emph{endlich} \& Vereinigungen \emph{beliebig} vieler Mengen aus \( \O \) in \( \O \)
+  \end{itemize}
+  \item \textbf{Offene Teilmengen} von \( X \): Elemente von \( \O \)
+  \item \textbf{Abgeschlossene Teilmengen} \( A \subset X \): \( X \setminus A \) offen
+  \item \textbf{Wichtige Topologien}:
+  \begin{itemize}
+    \item \emph{Triviale Topologie}: \( \O_{\text{trivial}} \coloneqq \left \{ X, \varnothing \right \} \)
+    \item \emph{Diskrete Topologie}: \( \O_{\text{diskret}} \coloneqq \mathcal{P}(X) \)
+    \item \emph{Standard-Topologie} auf \( \R \): \( \O_s \coloneqq \left \{ I \subset \R : I = \text{ Vereinigung offener Intervalle} \right \} \)
+    \item \emph{Zariski-Topologie}: \( \O_Z \coloneqq \left \{ O \subset \R : O = \R \setminus E\text{, } E \subset \R \text{ endlich} \right \} \cup \left \{ \varnothing \right \} \)
+    \item \emph{Induzierte Topologie} (Metrik):
+    \begin{itemize}
+      \item \( U \subset X \) \emph{d-offen} \( \Leftrightarrow \forall p \in U \ \exists \epsilon = \epsilon(p) > 0 : B_\epsilon(p) \subset U \)
+      \item \( d \)-offene Mengen bilden \emph{induzierte Topologie}
+    \end{itemize}
+    \item \emph{Teilraum-Topologie}: \( \O_Y \coloneqq \left \{ U \subseteq Y : \ \exists \ V \in \O_X : U = V \cap Y \right \} \) \\ (Topologischer Raum \( (X, \O_X) \), Teilmenge \( Y \subseteq X \))
+    \item \emph{Produkttopologie}: Topologische Räume \( (X, \O_X) \), \( (Y, \O_Y) \) \\ \( W \subseteq X \times Y \) \emph{offen} in \emph{Produkttopologie} \( \Leftrightarrow \forall (x,y) \in W \ \exists \) Umgebung \( U \) von \( x \) in \( X \) und \( V \) von \( y \) in \( Y \), sodass \( U \times V \subseteq W \)
+    \item \emph{Quotiententopologie}: \( (X, \O) \) topologischer Raum, \( \pi : X \ni x \mapsto [x] \in X/\sim \) kanonische Projektion
+    \begin{itemize}
+      \item[\( \to \)] \( U \subset X/\sim \) ist offen \( \Leftrightarrow \pi^{-1}(U) \) ist offen in \( X \).
+    \end{itemize}
+  \end{itemize}
+  \item \textbf{Basis} für Topologie \( \O \): \( \mathcal{B} \subset \O \) sodass für jede offene Menge \( \varnothing \neq V \in \O \) gilt
+  \begin{equation*}
+    V = \bigcup_{i \in I} V_i, \quad V_i \in \mathcal{B}
+  \end{equation*}
+  \item \textbf{Umgebung} \( U \subset X \) von \( A \subset X \), falls \( \exists \ O \in \O : A \subset O \subset U \) \\
+  (Topologischer Raum \( (X, \O) \))
+  \item \textbf{Innerer, äußerer Punkt} \( p \in X \) von \( A \subset X \), falls \( A \) (bzw. \( X \setminus A \)) Umgebung von \( \left \{ p \right \} \) ist
+  \begin{itemize}
+    \item[\( \to \)] \emph{Inneres} von \( A \subset X \): Menge \( \mathring{A} \) der inneren Punkte von \( A \)
+  \end{itemize}
+  \item \textbf{Abgeschlossene Hülle} von \( A \): Menge \( \overline{A} \subset X \), die \emph{nicht} äußere Punkte sind
+\end{itemize}
