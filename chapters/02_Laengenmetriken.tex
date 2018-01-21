@@ -1,0 +1,44 @@
+\section{Längenmetriken}
+
+\paragraph{Graphen}
+\begin{itemize}
+  \item \textbf{Graph}: \( G = (E,K) \) 
+  \begin{itemize}
+    \item Eckenmenge \( E \)
+    \item Kantenmenge \( K \subseteq \left \{ \left \{ u,v \right \} : u \neq v \in E \right \} \)
+  \end{itemize}
+  \item \textbf{Erreichbarkeit}: \( p,q \in E \) erreichbar \( \Leftrightarrow \ \exists \) Kantenzug zwischen \( p \) und \( q \)
+  \item \textbf{Zusammenhängend} \( \Leftrightarrow \) alle Ecken von beliebiger, fester Ecke aus erreichbar
+  \begin{itemize}
+    \item[\( \to \)] \( d(p,q) = \) kürzester Kantenzug zwischen \( p \) und \( q \) definiert Metrik
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Euklidische Metrik}
+\begin{itemize}
+  \item \textbf{Kurvenmenge}: \( \Omega_{pq}(X \subseteq \R^n) \) Menge der stetig db. Kurven zwischen \( p \) und \( q \)
+  \item \textbf{Euklidische Länge}: \( L_{\text{euk}}(c) = \int_a^b \left\Vert c'(t) \right\Vert \text{d}t \) (\( c \in \Omega_{pq}(\R^2) \))
+  \begin{itemize}
+    \item unabhängig von Kurvenparametrisierung
+    \item invariant unter Translationen, Drehungen, Spiegelungen
+  \end{itemize}
+  \item \textbf{Euklidische Metrik} auf \( \R^2 \)-Kurven: \( d_\text{euk}(p,q) \coloneqq \inf L_{\text{euk}}(c) \) \\
+  (\( p,q \in \R^2 \), \( c \in \) Menge der stetig differenzierbaren Kurven zwischen \( p \) und \( q \))
+  \begin{itemize}
+    \item[\( \to \)] \( (\R^2, d_{\text{euk}}) = (\R^2, d_e) \)
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Sphärische Geometrie}
+\begin{itemize}
+  \item \textbf{Sphärische Länge}: \( L_S(c) \coloneqq \int_a^b \Vert c'(t) \Vert dt = \int_a^b \sqrt{{x'}_1^2+{x'}_2^2+{x'}_3^2}dt \) \\
+  (für \( c: [a,b] \ni t \mapsto (x_1(t), x_2(t), x_3(t)) \in S_R^2 \subset \R^3 \))
+  \begin{itemize}
+    \item invariant unter \( \R^2 \)-Rotationen
+  \end{itemize}
+  \item \textbf{Sphärenmetrik}: \( d_S(p,q) \coloneqq \inf L_s(c) \) (\( c \in \Omega_{pq}(S_R^2) \))
+  \begin{itemize}
+    \item Großkreise sind kürzeste Verbindungkurven zwischen Punkten in \( S_R^2 \)
+    \item \( (S_R^2, D_S) \) ist metrischer Raum und isometrisch zu \( (S_R^2, R*d_W) \)
+  \end{itemize}
+\end{itemize}
