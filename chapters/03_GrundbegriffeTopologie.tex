@@ -7,8 +7,11 @@
     \item \( X, \varnothing \in \O \)
     \item Durchschnitte \emph{endlich} \& Vereinigungen \emph{beliebig} vieler Mengen aus \( \O \) in \( \O \)
   \end{itemize}
-  \item \textbf{Offene Teilmengen} von \( X \): Elemente von \( \O \)
-  \item \textbf{Abgeschlossene Teilmengen} \( A \subset X \): \( X \setminus A \) offen
+  \item \textbf{Topologischer Raum}: \( \left( X, \O \right) \)
+  \begin{itemize}
+    \item \emph{Offene Teilmengen} von \( X \): Elemente von \( \O \)
+    \item \emph{Abgeschlossene Teilmengen} \( A \subset X \): \( X \setminus A \) offen
+  \end{itemize}
   \item \textbf{Wichtige Topologien}:
   \begin{itemize}
     \item \emph{Triviale Topologie}: \( \O_{\text{trivial}} \coloneqq \left \{ X, \varnothing \right \} \)
@@ -50,7 +53,11 @@
     \item Teilraum von Hausdorff-Raum
     \item Produkt von Hausdorff-Räumen bzgl. Produkttopologie
   \end{itemize}
-  \item \textbf{Stetigkeit} (zw.\ top.\ Räumen \( (X,\O_X) \), \( Y, \O_Y \)): \( f: X \to Y \) stetig falls Urbilder offener Mengen \( \subseteq Y \) offen sind in \( X \)
+\end{itemize}
+
+\paragraph{Stetigkeit}
+\begin{itemize}
+  \item \textbf{Stetigkeit} (zwischen top.\ Räumen \( (X,\O_X) \), \( (Y, \O_Y) \)): \( f: X \to Y \) stetig falls Urbilder offener Mengen in \( Y \) offen sind in \( X \)
   \item \textbf{Homöomorphismus} (zw.\ top.\ Räumen): \( f: X \to Y \) bijektiv mit \( f \), \( f^{-1} \) stetig
   \begin{itemize}
     \item[\( \to \)] \( X \), \( Y \) \emph{homöomorph}, falls \( \exists \) Homö \( f: X \to Y \) (schreibe \( X \cong Y \))
@@ -59,5 +66,64 @@
       \item[\( \to \)] Gruppe
     \end{itemize}
   \end{itemize}
-  
+  \item \textbf{Wichtige Homöomorphismen}: 
+  \begin{itemize}
+    \item \( [0,1] \cong [a,b] \) (\( a < b \in \R \))
+    \item \( S^n \setminus \left \{ \left( 0,\dots,0,1 \right) \right \} \cong \R^n \) (also \( S^n \) ohne ``Nordpol'')
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Zusammenhang}
+\begin{itemize}
+  \item \textbf{Definition}: \( (X,\O) \) zusammenhängend, falls \( \varnothing \) und \( X \) die einzigen offen-abgeschlossenen Teilmengen sind
+  \begin{itemize}
+    \item[\( \Leftrightarrow \)] \( X \) ist \emph{nicht} disjunkte Vereinigung von \( 2 \) offenen, nichtleeren Mengen
+  \end{itemize}
+  \item \textbf{Eigenschaften}:
+  \begin{itemize}
+    \item \( A \) zusammenhängend \( \Rightarrow \) \( \overline{A} \) ist zusammenhängend
+    \item \( A \), \( B \) zusammenhängend, \( A \cap B \neq \varnothing \) \( \Rightarrow \) \( A \cup B \) zusammenhängend
+  \end{itemize}  
+\end{itemize}
+
+\paragraph{Zusammenhangskomponente}
+\begin{itemize}
+  \item \textbf{Definition}: \( Z(x) = \) Vereinigung aller zusammenhängender Teilmengen, die \( x \) enthalten
+  \item \textbf{Eigenschaften}:
+  \begin{itemize}
+    \item \( Z(X) =  \) disjunkte Zerlegung von \( X \)
+    \item Elemente von \( Z(X) = \) zusammenhängend
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Weg-Zusammenhang}
+\begin{itemize}
+  \item \textbf{Definition}: \( (X, \O) \) weg-zusammenhängend
+  \begin{equation*}
+    \Leftrightarrow \forall p,q \in X \ \exists \text{ Weg } \alpha : [0,1] \to X : \alpha(0) = p \wedge \alpha(1) = q
+  \end{equation*}
+  \item \textbf{Eigenschaften}:
+  \begin{itemize}
+    \item \( X \) weg-zusammenhängend \( \Rightarrow \) \( X \) zusammenhängend
+    \item Stetige Bilder von (weg-)zusammenhängenden Räumen sind es auch
+    \item Ein (nicht) zusammenhängender Raum kann nur zu einem (nicht) zusammenhängenden Raum homöomorph sein
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Kompaktheit}
+\begin{itemize}
+  \item \textbf{Definition}: \( (X,\O) \) kompakt \( \Leftrightarrow \) jede offene \( X \)-Überdeckung besitzt \emph{endliche} Teilüberdeckung:
+  \begin{equation*}
+    X = \bigcup_{i \in I} U_i,\ U_i \text{ offen } \Rightarrow \exists i_1,\dots,i_k \in I: X = U_{i_1} \cup \cdots \cup U_{i_k}
+  \end{equation*}
+  \item \textbf{Lokal kompakt}: Jeder Punkt von \( X \) besitzt kompakte Umgebung
+  \item \textbf{Eigenschaften}:
+  \begin{itemize}
+    \item Man kann von lokale auf globale Eigenschaften schließen
+    \item[\( \to \)] \( X \) kompakt, \( f: X \to \R \) lokal beschränkt \( \Rightarrow \) \( f \) beschränkt
+    \item Stetige Bilder kompakter Räume sind kompakt
+    \item Abgeschlossene Teilräume kompakter Räume sind kompakt
+    \item Produkte kompakter Räume sind kompakt
+    \item Kompakte Mengen in Hausdorff-Räumen sind abgeschlossen
+  \end{itemize}
 \end{itemize}

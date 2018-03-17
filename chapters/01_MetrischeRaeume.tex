@@ -1,16 +1,19 @@
 \section{Metrische Räume}
 
-\paragraph{Definitionen}
+\paragraph{Norm}
 \begin{itemize}
-  \item \textbf{Norm}: Abbildung \( \left\Vert \cdot \right\Vert: V \to \R_{\geq 0} \) sodass \( \forall v,w \in V \), \( \lambda \in \R \):
+  \item \textbf{Definition}: Abbildung \( \left\Vert \cdot \right\Vert: V \to \R_{\geq 0} \) sodass \( \forall v,w \in V \), \( \lambda \in \R \):
   \begin{itemize}
     \item \emph{Definitheit}: \( \left\Vert v \right\Vert = 0 \Leftrightarrow v = 0 \)
     \item \emph{Absolute Homogenität}: \( \left\Vert \lambda v \right\Vert = \left\vert \lambda \right\vert * \left\Vert v \right\Vert \)
     \item \emph{Dreiecksungleichung}: \( \left\Vert v + w \right\Vert \leq \left\Vert v \right\Vert + \left\Vert w \right\Vert \)
   \end{itemize}
   (\( \R \)-Vektorraum \( V \))
-  \item \textbf{Einheitssphäre}: \( S_1^n \coloneqq \left \{ x \in \R^{n+1} : \left\Vert x \right\Vert = 1 \right \} \) \( n \)-te Einheitssphäre
-  \item \textbf{Metrik}: \( d: X \times X \to \R_{\geq 0} \) (Menge \( X \)) sodass \( \forall x,y,z \in X: \)
+\end{itemize}
+
+\paragraph{Metrik}
+\begin{itemize}
+  \item \textbf{Definition}: \( d: X \times X \to \R_{\geq 0} \) (Menge \( X \)) sodass \( \forall x,y,z \in X: \)
   \begin{itemize}
     \item \emph{Positivität}: \( d(x,y) = 0 \Leftrightarrow x = y \)
     \item \emph{Symmetrie}: \( d(x,y) = d(y,x) \)
@@ -27,9 +30,18 @@
   \end{itemize}
   \item \textbf{Pseudometrik}: Metrik, aber \( d(x,y) = 0 \Rightarrow x = y \) gilt nicht
   \item \textbf{Metrischer Raum}: \( (X,d) \) (Menge \( X \), Metrik \( d \) auf \( X \))
+\end{itemize}
+
+\paragraph{Konstruktionen}
+\begin{itemize}
+  \item \textbf{Einheitssphäre}: \( S_1^n \coloneqq \left \{ x \in \R^{n+1} : \left\Vert x \right\Vert = 1 \right \} \) \( n \)-te Einheitssphäre
   \item \textbf{Abgeschlossener Ball}: abgeschlossener \( r \)-Ball um \( x \)
   \begin{equation*}
     \overline{B_r(x)} \coloneqq \{ y \in X : d(x,y) \leq r \}
+  \end{equation*}
+  \item \textbf{Offener Ball}: offener \( r \)-Ball um \( x \)
+  \begin{equation*}
+    B_r(x) \coloneqq \left \{ y \in X : d(x,y) < r \right \}
   \end{equation*}
   \item \textbf{Abstandserhaltende Abbildung}: \( f: X \to Y \) sodass
   \begin{equation*}
