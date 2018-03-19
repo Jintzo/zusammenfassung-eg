@@ -1,0 +1,177 @@
+\section{Flächengeometrie}
+
+\paragraph{Reguläre \( \R^3 \)-Flächen}
+\begin{itemize}
+  \item \textbf{Reguläre Fläche}: \( S \subset \R^3 \) (mit Teilraum-Topologie von \( \R^3 \)), falls \( \forall p \in S \) eine Umgebung \( V \) von \( p \) und eine Abbildung
+  \begin{align*}
+    F : \underset{\text{offen}}{U} \subset \R^2 &\to \underset{\text{offene TM von S}}{V \cap S} \subset \R^3 \\
+    (u,v) &\mapsto (x(u,v),y(u,v),z(u,v))
+  \end{align*}
+  existiert, sodass
+  \begin{enumerate}
+    \item \( F \) ist differenzierbarer Homöomorphismus
+    \item das Differenzial (Jacobi-Matrix) von \( F \),
+    \begin{equation*}
+      \text{d}F_q : \R^2 \supseteq T_q U \to T_{F(q)}\R^3 \cong \R^3
+    \end{equation*}
+    ist injektiv (hat Rang \( 2 \)) (\( \forall q \in U \))
+  \end{enumerate}
+  \item \textbf{Lokale Parametrisierung} von reg. Fläche \( S \): \( F \) von der regulären Fläche
+  \item \textbf{Vektorprodukt}: \( a \wedge b = (a_2b_3 - a_3b_2, a_3b_1-a_1b_3,a_1b_2-a_2b_1) \)
+  \begin{itemize}
+    \item \( (a \wedge b) \perp a, \enskip (a \wedge b) \perp b \)
+    \item \( \left\Vert a \wedge b \right\Vert = \left\Vert a \right\Vert * \left\Vert b \right\Vert * \text{sin }\alpha \)
+  \end{itemize}
+  \item \textbf{Tangentialraum} in \( p \in \R^3 \): affiner Unterraum \( T_p\R^3 = \left \{ p \right \} \times \R^3 \)
+  \item \textbf{Tangentialebene} für \( p = x(u,v) \in S \) (reguläre Fläche):
+  \begin{equation*}
+    T_p S = \text{d}x_{(u,v)}(T_{(u,v)}\R^2) = \left \{ p \right \} \times [x_u(u,v),x_v(u,v)] \subset T_p\R^3
+  \end{equation*}
+\end{itemize}
+
+\paragraph{Erste Fundamentalform}
+\begin{itemize}
+  \item \textbf{Erste Fundamentalform} einer regulären Fläche \( S \):
+  \begin{equation*}
+    \left( \begin{smallmatrix}
+      E(u,v) & F(u,v) \\ F(u,v) & G(u,v)
+    \end{smallmatrix} \right) \enskip \text{mit}
+  \end{equation*}
+  \begin{align*}
+    E(u,v) &= \left\langle x_u(u,v),x_u(u,v) \right\rangle \\
+    F(u,v) &= \left\langle x_u(u,v),x_v(u,v) \right\rangle \\
+    G(u,v) &= \left\langle x_v(u,v),x_v(u,v) \right\rangle
+  \end{align*}
+  \item \textbf{Längen}: Flächenkurve \( x: [\alpha,\beta] \ni t \mapsto x(u(t),v(t)) \eqqcolon c(t) \in S \).
+  \begin{equation*}
+    L(c) = \int_\alpha^\beta \sqrt{E(u,v){(u')}^2 + F(u,v)2u'v' + G(u,v){(v')}^2} \text{d}t
+  \end{equation*}
+  \item \textbf{Winkel}: Flächenkurven
+  \begin{align*}
+    c_1 : (-\epsilon, \epsilon) \ni t &\mapsto (u_1(t),v_1(t)) \in S, \\
+    c_2 : (-\epsilon, \epsilon) \ni t &\mapsto (u_2(t),v_2(t)) \in S,
+  \end{align*}
+  \( c_1(0) = c_2(0) \). \( \cos \measuredangle (c_1'(0),c_2'(0)) = \)
+  \begin{equation*}
+    \frac{Eu_1'u_2' + F(u_1'v_2' + v_1'u_2') + Gv_1'v_2'}{\sqrt{E{u_1^2}'+2Fu_1'v_1' + G{v_1^2}'}\sqrt{E{u_2^2}' + 2Fu_2'v_2' + G{v_2^2}'}}
+  \end{equation*}
+  \item \textbf{Flächeninhalt} von \( x(U) \subset S \subset \R^2 \):
+  \begin{equation*}
+    A(x(U)) = \iint_U \sqrt{\det \text{I}}\text{ d}u\text{d}v
+  \end{equation*}
+\end{itemize}
+
+\paragraph{(Lokale) Flächenisometrien}
+\begin{itemize}
+  \item \textbf{Reguläre Fläche = metrischer Raum}: Längenmetrik auf \( S \) durch
+  \begin{equation*}
+    d_S(p,q) = \inf L(c)
+  \end{equation*}
+  \item \textbf{(Flächen-)Isometrie} \( f: S \to \widetilde{S} \), falls
+  \begin{enumerate}
+    \item \( f \) ist Diffeomorphismus und
+    \item \( \forall (c: I \to S) :  L(f \circ c) = L(c) \) (``\( f \) ist längenerhaltend'')
+  \end{enumerate}
+  \item \textbf{Lokale Isometrie} \( f: S \to \widetilde{S} \), falls \( \forall p \in S \ \exists \) offene Umgebungen \( A \) von \( p \) und \( B \) von \( f(p) \), sodass \( f \) Isometrie von \( A \) nach \( B \) ist
+  \item \textbf{Kriterium lokale Isometrie}: \( x: U \to x(U) \subset S \), \( \widetilde{x}: U \to \widetilde{x}(U) \subset \widetilde{S} \) sodass
+  \begin{equation*}
+    \forall (u,v) \in U : \left( \begin{smallmatrix}
+      E & F \\ F & G
+    \end{smallmatrix} \right)(u,v) = \left( \begin{smallmatrix}
+      \widetilde{E} & \widetilde{F} \\ \widetilde{F} & \widetilde{G}
+    \end{smallmatrix} \right)(u,v),
+  \end{equation*}
+  so sind \( x(U) \) und \( \widetilde{x}(U) \) isometrisch
+\end{itemize}
+
+\paragraph{Zweite Fundamentalform}
+\begin{itemize}
+  \item \textbf{Normalenvektor}: für Parametrisierung \( x: U \ni (u,v) \mapsto x(u,v) \in S \)
+  \begin{equation*}
+    n(p) = n(x(u,v)) = n(u,v) = \frac{x_u(u,v) \wedge x_v(u,v)}{\left\Vert x_u(u,v) \wedge x_v(u,v) \right\Vert}
+  \end{equation*}
+  ist Einheitsvektor senkrecht zu \( T_p S \) (\( \forall p \in x(U) \subset S \))
+  \item \textbf{Zweite Fundamentalform} für Parametrisierung \( x: U \to S \):
+  \begin{equation*}
+    \left( \begin{smallmatrix}
+      L(u,v) & M(u,v) \\ M(u,v) & N(u,v)
+    \end{smallmatrix} \right) \coloneqq \left( \begin{smallmatrix}
+      \left\langle x_{uu}, n \right\rangle & \left\langle x_{uv}, n \right\rangle \\
+      \left\langle x_{vu},n \right\rangle & \left\langle x_{vv},n \right\rangle
+    \end{smallmatrix} \right)
+  \end{equation*}
+\end{itemize}
+
+\paragraph{Gauß-Krümmung}
+\begin{itemize}
+  \item \textbf{Gauß-Krümmung}: \( K: S \ni p \mapsto K(p) = \frac{\det \text{II}_p}{\text{det}\text{I}_p} \)
+  \begin{itemize}
+    \item \( K \) ist Größe der inneren Geometrie von \( S \)
+  \end{itemize}
+  \item \textbf{Bertrand-Puiseux} (\( p \in S \)): Für hinreichend kleine \( r > 0 \) ist
+  \begin{equation*}
+    S_r(p) = \left \{ q \in S : d(p,q) = r \right \}
+  \end{equation*}
+  eine geschlossene, d-bare Kurve, Länge \( L(S_r(p)) \). Dann gilt:
+  \begin{equation*}
+    K(p) = \lim_{r \to 0} \frac{3}{\pi r^3}(2\pi r - L(S_r(p)))
+  \end{equation*}
+\end{itemize}
+
+\paragraph{Gauß-Bonnet --- lokal}
+\begin{itemize}
+  \item \textbf{Kovariante Ableitung} von \( a \) nach \( u \):
+  \begin{equation*}
+    D_u a = a_u - \left\langle n,a_u \right\rangle n \enskip (= a_u + \left\langle n_u, a \right\rangle n)
+  \end{equation*}
+  (lokale Parametrisierung \( x: U \to S \), tangentiales Vektorfeld \( a: U \to \R^3 \) auf \( S \))
+  \begin{itemize}
+    \item[\( \Rightarrow \)] Komponente von \( a_u \) in Tangentialrichtung
+  \end{itemize}
+  \item \textbf{Geodätische Krümmung} \( \kappa_g(s) \): Krümmung der in Tangentialebene projizierten Kurve
+  \begin{equation*}
+    c''(s) = \underset{\mathclap{c'' \perp c'}}{0}*c'(s) + \kappa_g(s)(n(s) \wedge c'(s)) + \alpha(s)n(s) 
+  \end{equation*}
+  \item \textbf{Satz von Gauß-Bonnet --- lokal}:
+  \begin{equation*}
+    \int_{\delta G} \kappa_g(s)\text{d}s + \iint_G K\text{d}A = 2\pi
+  \end{equation*}
+  mit
+  \begin{enumerate}
+    \item \( S \) reguläre Fläche
+    \item \( x: U \to S \) lokale Parametrisierung
+    \item \( G \subseteq x(U) \subset S \) einfach zusammenhängendes Gebiet mit d-barem Rand \( \delta G \)
+    \item \( s \mapsto (u(s),v(s)) \) beschreibe \( x^{-1}(\delta G) \subset U \)
+  \end{enumerate}
+  \item \textbf{Geodätische}: Flächenkurve mit \( \kappa_g = 0 \) (``Gerade'' auf krummer Fläche)
+\end{itemize}
+
+\paragraph{Gauß-Bonnet --- mit Ecken}
+\begin{equation*}
+  \iint_G K\text{d}A + \int_{\delta G} \kappa_g \text{d}s = \pi(2-m)+\sum_{i=1}^m \alpha_i
+\end{equation*}
+(Ecken \( 1,\dots,m \) mit Innenwinkel \( \alpha_i \))
+
+\paragraph{Gauß-Bonnet --- global}
+\begin{itemize}
+  \item \textbf{Klassifikationssatz für 2-MF}: Kompakte randlose \( 2 \)-MF ist homöomorph zu
+  \begin{enumerate}
+    \item einer Sphäre \( S^2 \) oder
+    \item einer zusammenhängenden Summe von \( g \) Tori (falls \( M \) orientierbar) oder 
+    \item einer zusammenhängenden Summe von \( g \) projektiven Ebenen (sonst)
+  \end{enumerate}
+  \item \textbf{Geschlecht}: \( g \) von oben
+  \item \textbf{Euler-Charakteristik} von \( M \)-Triangulierung:
+  \begin{equation*}
+    \chi_T(M) = \#\text{Ecken} - \#\text{Kanten} + \#\text{Flächen}
+  \end{equation*}
+  \begin{itemize}
+    \item \( \chi(M) = \chi_T(M) \) unabhängig von Triangulierung
+    \item \( \chi_T(M) = 2-2g \)
+  \end{itemize}
+  \item \textbf{Globaler Satz von Gauß-Bonnet}:
+  \begin{equation*}
+    \iint_S K\text{d}A = 2\pi \chi(S)
+  \end{equation*}
+  (\( S \subset \R^3 \) kompakte randlose orientierbare Fläche)
+\end{itemize}

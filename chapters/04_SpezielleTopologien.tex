@@ -34,6 +34,9 @@
   \item \textbf{\( C^\infty \)-Atlas} \( \mathcal{A} \) von \( M \): alle möglichen Kartenwechsel sind \( C^\infty \)-Abbildungen (\( \R^n \))
   \item \textbf{\( C^\infty \)-Struktur}: maximaler \( C^\infty \)-Atlas für topologische MF
   \item \textbf{Differenzierbare Mannigfaltigkeit}: topologische MF mit \( C^\infty \)-Struktur
+  \begin{itemize}
+    \item \emph{orientierbar}, falls \( \exists \) Atlas \( S \), sodass alle Kartenwechsel positive Funktionaldeterminante haben
+  \end{itemize}
   \item \textbf{Punkt-Differenzierbarkeit}: \( F : M^m \to N^n \) differenzierbar in \( p \in M \), falls
   \begin{equation*}
     \psi \circ F \circ \phi^{-1} : \underbrace{\phi(U)}_{\subset \R^m} \to \underbrace{\psi(V)}_{\subset \R^n} \text{ ist \( C^\infty \) in \( \phi(p) \)}
@@ -42,21 +45,6 @@
   \item \textbf{Differenzierbarkeit}: \( F \) differenzierbar, falls \( F \) in allen \( p \in M \) d-bar ist
   \item \textbf{Diffeomorphismus} zwischen dMF: \( F \) bijektiv, \( F \) d-bar, \( F^{-1} \) d-bar 
   \item \textbf{Fläche}: \( 2 \)-dimensionale MF
-  \item \textbf{Reguläre Fläche}: \( S \subset \R^3 \) (mit Teilraum-Topologie von \( \R^3 \)), falls \( \forall p \in S \) eine Umgebung \( V \) von \( p \) und eine Abbildung
-  \begin{align*}
-    F : \underset{\text{offen}}{U} \subset \R^2 &\to \underset{\text{offene TM von S}}{V \cap S} \subset \R^3 \\
-    (u,v) &\mapsto (x(u,v),y(u,v),z(u,v))
-  \end{align*}
-  existiert, sodass
-  \begin{enumerate}
-    \item \( F \) ist differenzierbarer Homöomorphismus
-    \item das Differenzial (Jacobi-Matrix) von \( F \),
-    \begin{equation*}
-      \text{d}F_q : \R^2 \supseteq T_q U \to T_{F(q)}\R^3 \cong \R^3
-    \end{equation*}
-    ist injektiv (hat Rang \( 2 \)) (\( \forall q \in U \))
-  \end{enumerate}
-  \item \textbf{Lokale Parametrisierung} von reg. Fläche \( S \): \( F \) von der regulären Fläche
   \item \textbf{Produkt-Mannigfaltigkeit}: \( M^m \), \( N^n \) dMF-en \( \to M \times N \) ist \( (m+n) \)-dimensionale dMF
   \item \textbf{Lie-Gruppe}: Gruppe mit \( C^\infty \)-Mannigfaltigkeitsstruktur, sodass
   \begin{equation*}
