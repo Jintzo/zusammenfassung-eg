@@ -1,0 +1,139 @@
+\section{Spezielle Topologien}
+
+\paragraph{Topologische Mannigfaltigkeit}
+\begin{itemize}
+  \item \textbf{Definition}: topologischer Raum \( M \) mit
+  \begin{enumerate}
+    \item \emph{lokal euklidisch}: \( \forall p \in M \exists \) offene Umgebung \( U \) von \( p \) und Homöomorphismus \( \phi: U \to \phi(U) \subset \R^n \) mit festem \( n \)
+    \begin{itemize}
+      \item[\( \to \)] \textbf{Karte} \( (\phi, U) \)
+      \item[\( \to \)] \textbf{Atlas} \( \mathcal{A} = \left \{ \left( \phi_\alpha,U_\alpha \right) : \alpha \in A \right \} \) (mit \( \bigcup_{\alpha \in A} U_\alpha = M \))
+    \end{itemize}
+    \item \( M \) ist hausdorffsch
+    \item \( M \)-Topologie besitzt abzählbare Basis
+  \end{enumerate}
+  \item \textbf{Eigenschaften}:
+  \begin{itemize}
+    \item \textbf{Dimension} der Mannigfaltigkeit \( = n \)
+    \item \textbf{Geschlecht} der Mannigfaltigkeit \( = \) Anzahl 
+    \item Offene Teilmengen einer Mannigfaltigkeit sind auch Mannigfaltigkeiten
+  \end{itemize}
+  \item \textbf{Produkt-Mannigfaltigkeit}: Produkt zweier MF ist auch MF
+  \begin{itemize}
+    \item Dimension Produkt-MF = Summe der Dimensionen der beiden MF
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Differenzierbare Mannigfaltigkeit}
+\begin{itemize}
+  \item \textbf{Kartenwechsel}: Homöomorphismus
+  \begin{equation*}
+    \psi \circ \phi^{-1} : \underbrace{\phi(D)}_{\subset \R^n} \to \underbrace{\psi(D)}_{\subset \R^n}
+  \end{equation*}
+  (topologische MF \( M \), \( p \in M \))
+  \item \textbf{\( C^\infty \)-Atlas} \( \mathcal{A} \) von \( M \): alle möglichen Kartenwechsel sind \( C^\infty \)-Abbildungen (\( \R^n \))
+  \item \textbf{\( C^\infty \)-Struktur}: maximaler \( C^\infty \)-Atlas für topologische MF
+  \item \textbf{Differenzierbare Mannigfaltigkeit}: topologische MF mit \( C^\infty \)-Struktur
+  \item \textbf{Punkt-Differenzierbarkeit}: \( F : M^m \to N^n \) differenzierbar in \( p \in M \), falls
+  \begin{equation*}
+    \psi \circ F \circ \phi^{-1} : \underbrace{\phi(U)}_{\subset \R^m} \to \underbrace{\psi(V)}_{\subset \R^n} \text{ ist \( C^\infty \) in \( \phi(p) \)}
+  \end{equation*}
+  (\( M^m \), \( N^n \) d-bare M;\@ \( F \) stetig;\@ \( (U,\phi) \), \( (V,\psi) \) Karten um \( p \) und \( F(p) \))
+  \item \textbf{Differenzierbarkeit}: \( F \) differenzierbar, falls \( F \) in allen \( p \in M \) d-bar ist
+  \item \textbf{Diffeomorphismus} zwischen dMF: \( F \) bijektiv, \( F \) d-bar, \( F^{-1} \) d-bar 
+  \item \textbf{Fläche}: \( 2 \)-dimensionale MF
+  \item \textbf{Reguläre Fläche}: \( S \subset \R^3 \) (mit Teilraum-Topologie von \( \R^3 \)), falls \( \forall p \in S \) eine Umgebung \( V \) von \( p \) und eine Abbildung
+  \begin{align*}
+    F : \underset{\text{offen}}{U} \subset \R^2 &\to \underset{\text{offene TM von S}}{V \cap S} \subset \R^3 \\
+    (u,v) &\mapsto (x(u,v),y(u,v),z(u,v))
+  \end{align*}
+  existiert, sodass
+  \begin{enumerate}
+    \item \( F \) ist differenzierbarer Homöomorphismus
+    \item das Differenzial (Jacobi-Matrix) von \( F \),
+    \begin{equation*}
+      \text{d}F_q : \R^2 \supseteq T_q U \to T_{F(q)}\R^3 \cong \R^3
+    \end{equation*}
+    ist injektiv (hat Rang \( 2 \)) (\( \forall q \in U \))
+  \end{enumerate}
+  \item \textbf{Lokale Parametrisierung} von reg. Fläche \( S \): \( F \) von der regulären Fläche
+  \item \textbf{Produkt-Mannigfaltigkeit}: \( M^m \), \( N^n \) dMF-en \( \to M \times N \) ist \( (m+n) \)-dimensionale dMF
+  \item \textbf{Lie-Gruppe}: Gruppe mit \( C^\infty \)-Mannigfaltigkeitsstruktur, sodass
+  \begin{equation*}
+    G \times G \to G\text{,} \enskip (g,h) \mapsto gh^{-1} \quad \text{in \( C^\infty \) ist}
+  \end{equation*}
+  \begin{itemize}
+    \item Abgeschlossene Untergruppen von Lie-Gruppen sind auch Lie-Gruppen
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Simplizialkomplexe}
+\begin{itemize}
+  \item \textbf{Simplex} (\( k \)-dimensional): konvexe Hülle von \( k+1 \) Punkten in \( \R^n \):
+  \begin{equation*}
+    s(v_0,\dots,v_k) = \left \{ \sum_{i=0}^n \lambda_i v_i : \forall \lambda_i \geq 0, \sum_{i=0}^k \lambda_i = 1 \right \}
+  \end{equation*}
+  (\( v_0-v_1, \dots, v_0-v_k \) linear unabhängig)
+  \item \textbf{Teilsimplex}, \textbf{Seite}: konvexe Hülle einer Teilmenge von \( \left \{ v_0,\dots,v_k \right \} \)
+  \item \textbf{Simplizialkomplex}: endliche Menge \( K \) von Simplices in \( \R^n \), sodass
+  \begin{enumerate}
+    \item Für jeden Simplex enthält \( K \) auch alle Teilsimplices
+    \item Durchschnitt zweier Simplices ist \( \varnothing \) oder gemeinsamer Teilsimplex
+  \end{enumerate}
+  \begin{itemize}
+    \item \emph{Dimension}: maximale Dimension seiner Simplices
+    \item \emph{Euler-Charakteristik}: \( \chi(K) = \sum_{i=0}^k {(-1)}^i \alpha_i \) (\( \alpha_i = \# i \)-Simplices in \( K \))
+  \end{itemize}
+  \item \textbf{Endlicher Graph}: endlicher, \( 0 \)- oder \( 1 \)-dimensionaler Simplizialkomplex
+  \begin{itemize}
+    \item \emph{zusammenhängend}: \( \forall p, p' \in G \ \exists \ p = p_0,p_1,\dots,p_n = p' \), sodass \( p_{i-1} \) und \( p_i \) durch Kante verbunden sind
+    \item \emph{Baum}: zusammenhängender Graph \( T \), sodass für jeden \( 1 \)-Simplex \( s \in T \): \( T \setminus \mathring{s} \) ist nicht zusammenhängend (\( \mathring{s} = \) Kante ohne Endpunkte, offener \( 1 \)-Simplex)
+  \end{itemize}
+  \item \textbf{Euler-Charakteristik}: \( \chi(G) = \# \text{Ecken} - \# \text{Kanten} \)
+  \begin{itemize}
+    \item \emph{Baum}: \( \chi(T) = 1 \)
+    \item \emph{Zusammenhängender Graph}: \( \chi(G) = 1-n \) (\( n = \# \) Kanten, die man aus \( G \) entfernen kann, sodass \( G \) zusammenhängend bleibt)
+  \end{itemize}
+  \item \textbf{Spannender Baum} (von zusammenhängendem Graph): Komplement aller Kanten, die man entfernen kann, sodass \( G \) zusammenhängend bleibt
+  \item \textbf{Ebener Graph}: realisiert durch Punkte und Geraden in \( \R^2 \), sodass Kanten sich nicht schneiden
+  \begin{itemize}
+    \item \emph{Seiten}: Zusammenhangskomponenten von \( \R^2 \setminus G \)
+  \end{itemize}
+  \item \textbf{Planarer Graph}: Graph, der isomorph zu einem ebenen Graphen ist
+  \item \textbf{Euler-Formel}: für zusammenhängende, ebene Graphen \( G \) gilt:
+  \begin{equation*}
+    \chi(G) = e(G)-k(G)+s(G) = 2
+  \end{equation*}
+  \item \textbf{Polyeder}: \( P \subset \R^3 \) mit
+  \begin{enumerate}
+    \item \( P \) ist Durchschnitt endlich vieler affiner Halbräume von \( \R^3 \) \\*
+    (affine Halbräume gegeben durch \( a_i x + b_i y + c_i z \geq d_i \), \( i = 1,\dots,k \))
+    \item \( P \) ist beschränkt und nicht in einer Ebene enthalten
+  \end{enumerate}
+  \begin{itemize}
+    \item \emph{Rand}: Gegeben durch (Seiten-)Flächen, Kanten und Ecken
+    \item \emph{1-Skelett}: Menge der Ecken und Kanten, ist Graph in \( \R^3 \)
+    \item \emph{Schlegel-Diagramm}: Projektion von Punkt nahe bei einem Seitenmittelpunkt auf geeignete Ebene;\@ 1-Skelett \( \to \) ebener Graph
+    \item \emph{Eulersche Polyeder-Formel}: \( e(P)-k(P)-s(P) = 2 \)
+    \item \emph{regulär}: falls
+    \begin{enumerate}
+      \item alle Seitenflächen kongruente reguläre \( n \)-Ecke sind und
+      \item in jeder Ecke \( m \) solcher \( n \)-Ecke zusammentreffen
+    \end{enumerate}
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Verkleben}
+\begin{itemize}
+  \item \textbf{Verklebung}: \( X \), \( Y \) topologische Räume, \( A \subset X \) Teilraum, \( f: A \to Y \). \\* Äquivalenzrelation auf \( X \cupdot Y \) via \( f \):
+  \begin{equation*}
+    x ~ x' \overset{\text{Def}}{\Leftrightarrow} \begin{cases}
+      & x = x' \\
+      \text{oder} &f(x) = x' \enskip (x \in A) \\
+      \text{oder} &f(x') = x \enskip (x' \in A) \\
+      \text{oder} &f(x) = f(x') \enskip (x,x' \in A)
+    \end{cases}
+  \end{equation*}
+  \( \Rightarrow \) Quotientenraum \( X \cup_f Y = X \cupdot Y /\sim \) ist \emph{Verklebung} von \( X \) an \( Y \) via \( f \)
+  \item \textbf{Selbstverklebung}: Topologischer Raum \( X \), Teilraum \( A \subset X \), \( f: A \to X \), \( X_f \coloneqq X/\sim \) mit Äquivalenzrelation wie oben
+\end{itemize}
