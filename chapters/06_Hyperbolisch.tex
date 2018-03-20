@@ -1,0 +1,101 @@
+\section{Hyperbolische Ebene}
+
+\paragraph{Obere Halbebene}
+\begin{itemize}
+  \item \textbf{Definition}: \( H^2 = \left \{ (x_1,x_2) \in \R^2 : x_2 > 0 \right \} \)
+  \item \textbf{Punkte}: Elemente in \( H^2 \)
+  \item \textbf{Geraden}:
+  \begin{itemize}
+    \item Halbkreise mit Zentrum auf \( x_1 \)-Achse und
+    \item Parallelen zur \( x_2 \)-Achse
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Riemannsche Metrik}
+\begin{itemize}
+  \item \textbf{Tangentialraum}: \( T_p M = \) Menge von Äquivalenzklassen von d-baren Kurven durch \( p \in M \)
+  \item \textbf{Riemannsche Metrik} auf d-barer MF:\@ Familie von Skalarprodukten \( \left\langle \cdot, \cdot \right\rangle_p \) auf \( T_p M \), die d-bar von \( p \) abhängt
+\end{itemize}
+
+\paragraph{Ebene hyperbolische Geometrie}
+\begin{itemize}
+  \item \textbf{Modell}: \( H^2 = \left \{ z \in \C : \text{Im}(z) > 0 \right \} \) mit hyperbolischer riemannscher Metrik \( g_{ij} = \left( \begin{smallmatrix}
+    \frac{1}{y^2} & 0 \\ 0 & \frac{1}{y^2}
+  \end{smallmatrix} \right) \)
+  \item \textbf{Hyperbolische Länge} (mit \( c(t) = z(t) = x(t) + \text{i}y(t) \)):
+  \begin{align*}
+    L_h(c) &= \int_a^b \left\Vert c' \right\Vert_H \text{d}t = \int_a^b \frac{\sqrt{x'{(t)}^2+y'{(t)}^2}}{y(t)} \text{d}t \\
+     &= \int_a^b \frac{\left\vert z'(t) \right\vert}{y(t)}
+  \end{align*}
+  \item \textbf{Möbius-Transformation} von \( A = \left( \begin{smallmatrix}
+    a & b \\ c & d
+  \end{smallmatrix} \right) \in \text{SL}(n,\R) \):
+  \begin{equation*}
+    T_A : H^2 \ni z \mapsto \frac{az+b}{cz+d} \in H^2
+  \end{equation*}
+  \begin{itemize}
+    \item hyperbolische Länge einer d-baren \( H^2 \)-Kurve ist invariant unter MT
+  \end{itemize}
+  \item \textbf{Hyperbolische Längenmetrik}: (\( \Omega_{pq} \) stückw. db Kurven in \( H^2 \) zw \( p \) und \( q \))
+  \begin{equation*}
+    d_h(p,q) = \inf \underset{c \in \Omega}{L_k}(c)
+  \end{equation*}
+  \begin{itemize}
+    \item \( (H^2, d_h) \) ist metrischer Raum
+    \item Möbius-Transformationen \( \left \{ T_A : A \in \text{SL}(2,\R) \right \} \) sind Isom. von \( (H^2, d_h) \)
+    \item \( (H^2, d_h) \) ist \emph{homogen}: \( \forall p,q \in H^2 \ \exists \) Iso \( T_A : T_A(p) = q \)
+    \item Streckungen sind Isometrien in \( H^2 \) (mit \( A = \left( \begin{smallmatrix}
+      \sqrt{\lambda} & 0 \\ 0 & \frac{1}{\sqrt{\lambda}}
+    \end{smallmatrix} \right) \)) \\*
+    \( \Rightarrow d_h(z,w) = d_h(\lambda z, \lambda w) \)
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Geodätische}
+\begin{itemize}
+  \item \textbf{Geodätische} zwischen Punkten in \( H^2, d_h \): parametrisierte Halbkreise und Geraden orthogonal zur reellen Achse \( \Rightarrow \) Halbkreise haben Zentrum auf reeller Achse
+  \item[\( \Rightarrow \)] \( \forall p,q \in H^2 \) können durch eindeutige Geodätische verbunden werden;\@ \( d_h(p,q) = \) hyp. Länge dieser Geodätischen
+\end{itemize}
+
+\paragraph{Gauß-Bonnet}
+\begin{itemize}
+  \item \textbf{Hyperbolischer Flächeninhalt} für \( A \subset H^2 \):
+  \begin{equation*}
+    \mu(a) = \iint_A \sqrt{\det(g_{ij}(z))}\text{d}x\text{d}y = \iint_A \frac{1}{y^2}\text{d}x\text{d}y \leq x
+  \end{equation*}
+  \begin{itemize}
+    \item Flächeninhalt invariant unter Isometrien (also Möbius-Transformationen)
+  \end{itemize}
+  \item \textbf{Hyperbolisches Polygon} mit \( n \) Seiten: Abgeschlossene Teilmenge von \\* \( \overline{H^2} = H^2 \cup (\R \cup \left \{ \infty \right \}) \)
+  \begin{itemize}
+    \item \emph{Seiten}: geodätische Segmente, die Polygon begrenzen
+    \item \emph{Ecken}: Stelle, an der sich genau zwei Seiten schneiden
+  \end{itemize}
+  \item \textbf{Hyperbolische Winkelmessung}: wie im Euklidischen
+  \item \textbf{Gauß-Bonnet}: Flächeninhalt eines hyp. \( \triangle \) ist durch Winkel vollständig bestimmt:
+  \begin{equation*}
+    \mu(\triangle) = \pi - \alpha - \beta - \gamma \leq \pi
+  \end{equation*}
+\end{itemize}
+
+\paragraph{Krümmung}
+\begin{itemize}
+  \item \textbf{Einheitsscheibe}: \( D^2 = \left \{ (x,y) \in \R^2 : x^2 + y^2 < 1 \right \} = \left \{ z \in \C : \left\vert z \right\vert < 1 \right \} \)
+  \begin{itemize}
+    \item \emph{Metrik} auf \( D^2 \) mit
+    \begin{equation*}
+      M: H^2 \ni z \mapsto \frac{\text{i}z + 1}{z + \text{i}} \in D^2
+    \end{equation*}
+    durch
+    \begin{equation*}
+      d_h^\ast(z,w) = d_h(M^{-1}(z),M^{-1}(w))
+    \end{equation*}
+  \end{itemize}
+  \item \textbf{Krümmung} für Längenraum:
+  \begin{equation*}
+    K(p) = \lim_{\rho \to 0} \frac{3}{\pi p^3}(2\pi\rho - L(S_\rho(0)))
+  \end{equation*}
+  \begin{itemize}
+    \item Krümmung von \( D^2 \) (und damit auch \( H^2 \)) ist konstant \( -1 \) (nutzt \( L_{h^\ast}(S_\rho(0)) = 2\pi\sinh(\rho) \) für hyp. Kreis mit Radius \( \rho \), Zentrum \( 0 \))
+  \end{itemize}
+\end{itemize}
