@@ -9,20 +9,19 @@
 
 \paragraph{Riemannsche Metrik}
 \begin{itemize}
-  \item \textbf{Tangentialraum}: \( T_p M = \) Menge von Äquivalenzklassen von d-baren Kurven durch \( p \in M \)
+  \item \textbf{Tangentialraum}: \( T_p M = \) Menge von Äq-Klassen von db Kurven durch \( p \in M \)
   \item \textbf{Riemannsche Metrik} auf d-barer MF:\@ Familie von Skalarprodukten \( \left\langle \cdot, \cdot \right\rangle_p \) auf \( T_p M \), die d-bar von \( p \) abhängt
 \end{itemize}
 
 \paragraph{Ebene hyperbolische Geometrie}
 \begin{itemize}
   \item \textbf{Modell}: \( H^2 = \left \{ z \in \C : \text{Im}(z) > 0 \right \} \) mit hyperbolischer riemannscher Metrik \( g_{ij} = \left( \begin{smallmatrix}
-    \frac{1}{y^2} & 0 \\ 0 & \frac{1}{y^2}
+    1/y^2 & 0 \\ 0 & 1/y^2
   \end{smallmatrix} \right) \)
   \item \textbf{Hyperbolische Länge} (mit \( c(t) = z(t) = x(t) + \text{i}y(t) \)):
-  \begin{align*}
-    L_h(c) &= \int_a^b \left\Vert c' \right\Vert_H \text{d}t = \int_a^b \frac{\sqrt{x'{(t)}^2+y'{(t)}^2}}{y(t)} \text{d}t \\
-     &= \int_a^b \frac{\left\vert z'(t) \right\vert}{y(t)}
-  \end{align*}
+  \begin{equation*}
+    L_h(c) = \int_a^b \left\Vert c' \right\Vert_H \text{d}t = \int_a^b \frac{\sqrt{x'{(t)}^2+y'{(t)}^2}}{y(t)} \text{d}t = \int_a^b \frac{\left\vert z'(t) \right\vert}{y(t)}
+  \end{equation*}
   \item \textbf{Möbius-Transformation} von \( A = \left( \begin{smallmatrix}
     a & b \\ c & d
   \end{smallmatrix} \right) \in \text{SL}(n,\R) \):
@@ -41,7 +40,7 @@
     \item Möbius-Transformationen \( \left \{ T_A : A \in \text{SL}(2,\R) \right \} \) sind Isom. von \( (H^2, d_h) \)
     \item \( (H^2, d_h) \) ist \emph{homogen}: \( \forall p,q \in H^2 \ \exists \) Iso \( T_A : T_A(p) = q \)
     \item Streckungen sind Isometrien in \( H^2 \) (mit \( A = \left( \begin{smallmatrix}
-      \sqrt{\lambda} & 0 \\ 0 & \frac{1}{\sqrt{\lambda}}
+      \sqrt{\lambda} & 0 \\ 0 & 1/\sqrt{\lambda}
     \end{smallmatrix} \right) \)) \\*
     \( \Rightarrow d_h(z,w) = d_h(\lambda z, \lambda w) \)
   \end{itemize}
@@ -49,7 +48,7 @@
 
 \paragraph{Geodätische}
 \begin{itemize}
-  \item \textbf{Geodätische} zwischen Punkten in \( H^2, d_h \): parametrisierte Halbkreise und Geraden orthogonal zur reellen Achse \( \Rightarrow \) Halbkreise haben Zentrum auf reeller Achse
+  \item \textbf{Geodätische} zw Punkten in \( H^2, d_h \): parametrisierte Halbkreise und Geraden orthogonal zur reellen Achse \( \Rightarrow \) Halbkreise haben Zentrum auf reeller Achse
   \item[\( \Rightarrow \)] \( \forall p,q \in H^2 \) können durch eindeutige Geodätische verbunden werden;\@ \( d_h(p,q) = \) hyp. Länge dieser Geodätischen
 \end{itemize}
 
@@ -68,10 +67,7 @@
     \item \emph{Ecken}: Stelle, an der sich genau zwei Seiten schneiden
   \end{itemize}
   \item \textbf{Hyperbolische Winkelmessung}: wie im Euklidischen
-  \item \textbf{Gauß-Bonnet}: Flächeninhalt eines hyp. \( \triangle \) ist durch Winkel vollständig bestimmt:
-  \begin{equation*}
-    \mu(\triangle) = \pi - \alpha - \beta - \gamma \leq \pi
-  \end{equation*}
+  \item \textbf{Gauß-Bonnet}: Flächeninhalt eines hyp. \( \triangle \) ist durch Winkel vollständig bestimmt: \( \mu(\triangle) = \pi - \alpha - \beta - \gamma \leq \pi \)
 \end{itemize}
 
 \paragraph{Krümmung}

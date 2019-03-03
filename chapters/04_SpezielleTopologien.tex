@@ -28,10 +28,9 @@
 \begin{itemize}
   \item \textbf{Kartenwechsel}: Homöomorphismus
   \begin{equation*}
-    \psi \circ \phi^{-1} : \underbrace{\phi(D)}_{\subset \R^n} \to \underbrace{\psi(D)}_{\subset \R^n}
+    \psi \circ \phi^{-1} : \underbrace{\phi(D)}_{\subset \R^n} \to \underbrace{\psi(D)}_{\subset \R^n} \qquad \text{(topologische MF \( M \), \( p \in M \))}
   \end{equation*}
-  (topologische MF \( M \), \( p \in M \))
-  \item \textbf{\( C^\infty \)-Atlas} \( \mathcal{A} \) von \( M \): alle möglichen Kartenwechsel sind \( C^\infty \)-Abbildungen (\( \R^n \))
+  \item \textbf{\( C^\infty \)-Atlas} \( \mathcal{A} \) von \( M \): alle mögl Kartenwechsel sind \( C^\infty \)-Abbildungen (\( \R^n \))
   \item \textbf{\( C^\infty \)-Struktur}: maximaler \( C^\infty \)-Atlas für topologische MF
   \item \textbf{Differenzierbare Mannigfaltigkeit}: topologische MF mit \( C^\infty \)-Struktur
   \begin{itemize}
@@ -45,7 +44,7 @@
   \item \textbf{Differenzierbarkeit}: \( F \) differenzierbar, falls \( F \) in allen \( p \in M \) d-bar ist
   \item \textbf{Diffeomorphismus} zwischen dMF: \( F \) bijektiv, \( F \) d-bar, \( F^{-1} \) d-bar 
   \item \textbf{Fläche}: \( 2 \)-dimensionale MF
-  \item \textbf{Produkt-Mannigfaltigkeit}: \( M^m \), \( N^n \) dMF-en \( \to M \times N \) ist \( (m+n) \)-dimensionale dMF
+  \item \textbf{Produkt-Mannigfaltigkeit}: \( M^m \), \( N^n \) dMFen \( \to M \times N \) ist \( (m+n) \)-dim dMF
   \item \textbf{Lie-Gruppe}: Gruppe mit \( C^\infty \)-Mannigfaltigkeitsstruktur, sodass
   \begin{equation*}
     G \times G \to G\text{,} \enskip (g,h) \mapsto gh^{-1} \quad \text{in \( C^\infty \) ist}
@@ -75,7 +74,7 @@
   \item \textbf{Endlicher Graph}: endlicher, \( 0 \)- oder \( 1 \)-dimensionaler Simplizialkomplex
   \begin{itemize}
     \item \emph{zusammenhängend}: \( \forall p, p' \in G \ \exists \ p = p_0,p_1,\dots,p_n = p' \), sodass \( p_{i-1} \) und \( p_i \) durch Kante verbunden sind
-    \item \emph{Baum}: zusammenhängender Graph \( T \), sodass für jeden \( 1 \)-Simplex \( s \in T \): \( T \setminus \mathring{s} \) ist nicht zusammenhängend (\( \mathring{s} = \) Kante ohne Endpunkte, offener \( 1 \)-Simplex)
+    \item \emph{Baum}: zusammenhängender Graph \( T \), sodass für jeden \( 1 \)-Simplex \( s \in T \): \( T \setminus \mathring{s} \) ist nicht zusammenhängend (\( \mathring{s} = \) Kante ohne Endpkte, offener \( 1 \)-Simplex)
   \end{itemize}
   \item \textbf{Euler-Charakteristik}: \( \chi(G) = \# \text{Ecken} - \# \text{Kanten} \)
   \begin{itemize}
@@ -113,7 +112,7 @@
 
 \paragraph{Verkleben}
 \begin{itemize}
-  \item \textbf{Verklebung}: \( X \), \( Y \) topologische Räume, \( A \subset X \) Teilraum, \( f: A \to Y \). \\* Äquivalenzrelation auf \( X \cupdot Y \) via \( f \):
+  \item \textbf{Verklebung}: \( X \), \( Y \) topologische Räume, \( A \subset X \) Teilraum, \( f: A \to Y \). \\* Äquivalenzrelation auf \( X \sqcup Y \) via \( f \):
   \begin{equation*}
     x ~ x' \overset{\text{Def}}{\Leftrightarrow} \begin{cases}
       & x = x' \\
@@ -122,6 +121,6 @@
       \text{oder} &f(x) = f(x') \enskip (x,x' \in A)
     \end{cases}
   \end{equation*}
-  \( \Rightarrow \) Quotientenraum \( X \cup_f Y = X \cupdot Y /\sim \) ist \emph{Verklebung} von \( X \) an \( Y \) via \( f \)
+  \( \Rightarrow \) Quotientenraum \( X \cup_f Y = X \sqcup Y /\sim \) ist \emph{Verklebung} von \( X \) an \( Y \) via \( f \)
   \item \textbf{Selbstverklebung}: Topologischer Raum \( X \), Teilraum \( A \subset X \), \( f: A \to X \), \( X_f \coloneqq X/\sim \) mit Äquivalenzrelation wie oben
 \end{itemize}

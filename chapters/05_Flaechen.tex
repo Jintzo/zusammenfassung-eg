@@ -2,12 +2,11 @@
 
 \paragraph{Reguläre \( \R^3 \)-Flächen}
 \begin{itemize}
-  \item \textbf{Reguläre Fläche}: \( S \subset \R^3 \) (mit Teilraum-Topologie von \( \R^3 \)), falls \( \forall p \in S \) eine Umgebung \( V \) von \( p \) und eine Abbildung
+  \item \textbf{Reguläre Fläche}: \( S \subset \R^3 \) (mit Teilraum-Topologie von \( \R^3 \)), falls \( \forall p \in S \) eine Umgebung \( V \) von \( p \) und ex. eine Abbildung
   \begin{align*}
     F : \underset{\text{offen}}{U} \subset \R^2 &\to \underset{\text{offene TM von S}}{V \cap S} \subset \R^3 \\
-    (u,v) &\mapsto (x(u,v),y(u,v),z(u,v))
+    (u,v) &\mapsto (x(u,v),y(u,v),z(u,v)) \quad \text{mit}
   \end{align*}
-  existiert, sodass
   \begin{enumerate}
     \item \( F \) ist differenzierbarer Homöomorphismus
     \item das Differenzial (Jacobi-Matrix) von \( F \),
@@ -124,7 +123,7 @@
   \begin{equation*}
     D_u a = a_u - \left\langle n,a_u \right\rangle n \enskip (= a_u + \left\langle n_u, a \right\rangle n)
   \end{equation*}
-  (lokale Parametrisierung \( x: U \to S \), tangentiales Vektorfeld \( a: U \to \R^3 \) auf \( S \))
+  (lok Parametrisierung \( x: U \to S \), tangentiales Vektorfeld \( a: U \to \R^3 \) auf \( S \))
   \begin{itemize}
     \item[\( \Rightarrow \)] Komponente von \( a_u \) in Tangentialrichtung
   \end{itemize}
@@ -134,9 +133,8 @@
   \end{equation*}
   \item \textbf{Satz von Gauß-Bonnet --- lokal}:
   \begin{equation*}
-    \int_{\delta G} \kappa_g(s)\text{d}s + \iint_G K\text{d}A = 2\pi
+    \int_{\delta G} \kappa_g(s)\text{d}s + \iint_G K\text{d}A = 2\pi \quad \text{mit}
   \end{equation*}
-  mit
   \begin{enumerate}
     \item \( S \) reguläre Fläche
     \item \( x: U \to S \) lokale Parametrisierung
